@@ -40,7 +40,7 @@ const Navbar = () => {
         setShowAccountMenu((current) => !current);
     }, [])
 
-    const Div = styled.div`
+    const NavContainer = styled.div`
         padding-left: 1rem;
         padding-right: 1rem;
         @media (min-width : 768px) {
@@ -54,6 +54,9 @@ const Navbar = () => {
         align-items : center;
         transition-duration: 500ms;
         background-color : ${showBackground ? 'rgba(24, 24, 27,0.9);' : ';'}
+        &:hover {
+            background-color : rgba(24, 24, 27,0.7);
+        }
     `;
     const Chevron = styled.div`
     color : #FFF;
@@ -62,7 +65,7 @@ const Navbar = () => {
 
     return (
         <Nav >
-            <Div>
+            <NavContainer>
                 
                 <NetflixLogo src="/images/logo.png" alt="Logo" />
                 <MenuDesktop>
@@ -97,7 +100,7 @@ const Navbar = () => {
                         <AccountMenu visible={showAccountMenu} />
                     </MyProfile>
                 </RightNav>
-            </Div>
+            </NavContainer>
         </Nav>
     )
 }

@@ -6,6 +6,7 @@ import ButtonSubmit from "@/components/Buttons/ButtonSubmit"
 import { NextPageContext } from "next"
 import useCurrentUser from "@/components/hooks/useCurrentUser"
 import Navbar from "@/components/Navbar"
+import Billboard from "@/components/Billboard"
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -30,8 +31,8 @@ export default function Home() {
     <>
       <GlobalStyle />
       <Navbar />
+      <Billboard />
   
-    
     </>
   )
 }
