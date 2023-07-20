@@ -22,6 +22,8 @@ const Container = styled.div`
     cursor: pointer;
     &:hover{
         color: #d1d5db;
+        z-index : 40;
+        transform : scale(1.1);
     }
     transition-duration: 500ms;
 `;
