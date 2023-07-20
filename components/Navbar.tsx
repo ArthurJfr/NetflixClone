@@ -39,28 +39,27 @@ const Navbar = () => {
     const toggleAccountMenu = useCallback(() => {
         setShowAccountMenu((current) => !current);
     }, [])
-   
+
     const Div = styled.div`
-    padding-left: 1rem;
-    padding-right: 1rem;
-    @media (min-width : 768px) {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    padding-top : 1.5rem;
-    padding-bottom : 1.5rem;
-    display: flex;
-    flex-direction : row;
-    align-items : center;
-    transition-duration: 500ms;
-    background-color : ${showBackground ? 'rgba(24, 24, 27,0.9);' : ''}
-    
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @media (min-width : 768px) {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+        padding-top : 1.5rem;
+        padding-bottom : 1.5rem;
+        display: flex;
+        flex-direction : row;
+        align-items : center;
+        transition-duration: 500ms;
+        background-color : ${showBackground ? 'rgba(24, 24, 27,0.9);' : ';'}
     `;
     const Chevron = styled.div`
     color : #FFF;
     transform : ${showAccountMenu ? 'rotate(180deg);' : 'rotate(0);'}
-    
     `;
+
     return (
         <Nav >
             <Div>
@@ -101,13 +100,9 @@ const Navbar = () => {
             </Div>
         </Nav>
     )
-    
-
 }
 
 export default Navbar;
-
-
 
 const Browse = styled.p`
     color : #FFF;
@@ -187,7 +182,7 @@ const InnerProfile = styled.div`
     overflow : hidden;
 `;
 const ProfileImage = styled.img`
-width : 100%;
+    width : 100%;
 `;
 
 

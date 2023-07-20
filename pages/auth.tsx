@@ -8,17 +8,9 @@ import { signIn } from 'next-auth/react' ;
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 
-
-
-
-
-
-
 const Logo = styled.img`height : 3rem; `;
 
 const Auth = () => {
-
-   
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -29,7 +21,6 @@ const Auth = () => {
     const toggleVariant = useCallback(()  => {
         setVariant((currentVariant) => currentVariant === 'login' ?  'register' : 'login');
     },[]);
-
 
     const login = useCallback(async () =>  {
         try {
@@ -42,7 +33,6 @@ const Auth = () => {
             console.log(error)
         }
     }, [email,password])
-
 
     const register = useCallback(async () => {
         try {
