@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import useBillboard from "./hooks/useBillboard";
 import React from 'react';
+import Nlogo from "./Nlogo";
 
 
 const Billboard = () => {
@@ -19,9 +20,13 @@ const Billboard = () => {
             >
             </MainVideo>
             <Overing>
+                <Nlogo />
                 <Title>
                     {data?.title}
                 </Title>
+                <Description>
+                    {data?.description}
+                </Description>
             </Overing>
         </BillboardContainer>
     )
@@ -43,7 +48,7 @@ const Overing = styled.div`
     top : 50%;
     margin-left : 1rem;
     @media (min-width : 768px){
-        top : 40%;
+        top : 30%;
         margin-left : 4rem;
     }
     width : 100%;
@@ -60,6 +65,17 @@ const Title = styled.p`
     }
     @media (min-width : 1024px){
         font-size : 6rem;
+    }
+    margin : 0;
+`;
+const Description = styled.p`
+    color : #FFF;
+    font-size : 8px;
+    width : 30%;
+    margin-top : 0.75rem;
+    @media (min-width : 768px){
+        font-size : 1.25rem;
+        margin-top : 2rem;
     }
 
 `;
