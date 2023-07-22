@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useBillboard from "./hooks/useBillboard";
+import useBillboard from "../hooks/useBillboard";
 import React from 'react';
 import Nlogo from "./Nlogo";
 import GlobalStyle from "@/styles/globalStyles";

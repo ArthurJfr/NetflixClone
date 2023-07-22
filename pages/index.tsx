@@ -1,12 +1,14 @@
-import styled from "styled-components"
-import GlobalStyle from "@/styles/globalStyles"
-export const Title = styled.h1`color : green;`
-import { getSession, signOut } from "next-auth/react"
-import ButtonSubmit from "@/components/Buttons/ButtonSubmit"
+import styled from "styled-components";
+import GlobalStyle from "@/styles/globalStyles";
+
+import { getSession } from "next-auth/react"
 import { NextPageContext } from "next"
-import useCurrentUser from "@/components/hooks/useCurrentUser"
-import Navbar from "@/components/Navbar"
-import Billboard from "@/components/Billboard"
+
+import useCurrentUser from "@/hooks/useCurrentUser";
+
+import Navbar from "@/components/Navbar";
+import Billboard from "@/components/Billboard";
+import MovieList from "@/components/MovieList";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -32,11 +34,14 @@ export default function Home() {
       <GlobalStyle />
       <Navbar />
       <Billboard />
-  
+      <ListContainer>
+        <MovieList />
+      </ListContainer>
+      
     </>
   )
 }
 
-const Para = styled.p`
-  color : white;
-`
+const ListContainer = styled.div`
+  padding-bottom : 10rem;
+`;
