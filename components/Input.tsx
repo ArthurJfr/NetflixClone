@@ -11,25 +11,18 @@ interface InputProps {
     className? :string
 }
 
-
-
-
-
-
-
 const Input : React.FC<InputProps> = ({
     id,
     onChange,
     value,
     label,
-     type, 
-     className
+    type, 
+    className
 }) => {
     return (
         <Relative>
-
-        <InputStyle  value={value} type={type} onChange={onChange} onFocus={Float}  onBlur={unFloat} id={id}  placeholder=""/>
-        <Label  className={className}  htmlFor={id} >{label}</Label>
+            <InputStyle  value={value} type={type} onChange={onChange} onFocus={Float}  onBlur={unFloat} id={id}  placeholder=""/>
+            <Label  className={className}  htmlFor={id} >{label}</Label>
         </Relative>
     )
 }
@@ -51,13 +44,11 @@ outline : none;
 box-shadow : none ;
 border : none ;
 color : white ;
-
 }
-`
+`;
 const Relative = styled.div`
 position : relative ; 
 `;
-
 const Label = styled.label`
 position : absolute ; 
 font-size : 1.2rem ; 

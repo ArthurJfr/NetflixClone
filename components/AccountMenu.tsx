@@ -30,7 +30,7 @@ const AccountMenu : React.FC<AccountMenuProps> = ({ visible }) => {
 export default AccountMenu;
 
 const Container = styled.div`
-    background-color : #000;
+    background-color : #000;    
     width : 14rem;
     position : absolute ; 
     top : 3.5rem;

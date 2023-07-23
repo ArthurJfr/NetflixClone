@@ -1,9 +1,16 @@
-import styled from "styled-components"
-  
+import styled from "styled-components";
+
 interface ButtonProps {
     content :string
     onClick? : () => void
 } 
+
+const ButtonSubmit = (props : ButtonProps) => {
+    return (
+        <ButtonStyle onClick={props.onClick}>{props.content}</ButtonStyle>
+    )
+}
+export default ButtonSubmit;
 
 const ButtonStyle = styled.button`
 background-color: rgb(220 38 38);
@@ -18,14 +25,4 @@ border : none ;
 outline : none;
 padding : 0.75rem;
 font-size : 1rem
-
-
-`
-
-
-const ButtonSubmit = (props : ButtonProps) => {
-    return (
-        <ButtonStyle onClick={props.onClick}>{props.content}</ButtonStyle>
-    )
-}
-export default ButtonSubmit
+`;
