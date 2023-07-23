@@ -11,22 +11,6 @@ const Billboard = () => {
 
     const { data } = useBillboard();
 
-    const Title = styled.p`
-    color : #FFF;
-    font-size : 1rem;
-    line-height : 5.5rem;
-    height : 100%;
-    width : 30%;
-    font-weight : bold;
-    @media (min-width : 768px){
-        font-size : 5rem;
-    }
-    @media (min-width : 1024px){
-        font-size : 6rem;
-    }
-    margin : 0;
-`;
-
     return (
         <BillboardContainer>
             
@@ -57,11 +41,27 @@ const Billboard = () => {
 
 export default Billboard;
 
+    const Title = styled.p`
+    color : #FFF;
+    font-size : 1rem;
+    line-height : 5.5rem;
+    height : 100%;
+    width : 30%;
+    font-weight : bold;
+    @media (min-width : 768px){
+        font-size : 5rem;
+    }
+    @media (min-width : 1024px){
+        font-size : 6rem;
+    }
+    margin : 0;
+`;
+
 const BillboardContainer = styled.div`
     position : relative;
     height : 56.35vw;
 `;
- const MainVideo = styled.video`
+const MainVideo = styled.video`
         width : 100%;
         height : 56.35vw;
         object-fit: cover;

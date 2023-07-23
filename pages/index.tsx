@@ -35,7 +35,7 @@ export default function Home() {
       <Navbar />
       <Billboard />
       <ListContainer>
-        <MovieList />
+        
       </ListContainer>
       
     </>

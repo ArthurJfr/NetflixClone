@@ -11,7 +11,32 @@ interface InputProps {
     className? :string
 }
 
- const InputStyle = styled.input`
+
+
+
+
+
+
+const Input : React.FC<InputProps> = ({
+    id,
+    onChange,
+    value,
+    label,
+     type, 
+     className
+}) => {
+    return (
+        <Relative>
+
+        <InputStyle  value={value} type={type} onChange={onChange} onFocus={Float}  onBlur={unFloat} id={id}  placeholder=""/>
+        <Label  className={className}  htmlFor={id} >{label}</Label>
+        </Relative>
+    )
+}
+
+export default Input;
+
+const InputStyle = styled.input`
 display : block ;
 border-radius : 6px;
 font-size : 1rem ;
@@ -43,27 +68,3 @@ top: 0.4rem ;
 left : 1.2rem ;
 transform-origin : 0 ;
 `;
-
-
-
-
-
-
-const Input : React.FC<InputProps> = ({
-    id,
-    onChange,
-    value,
-    label,
-     type, 
-     className
-}) => {
-    return (
-        <Relative>
-
-        <InputStyle  value={value} type={type} onChange={onChange} onFocus={Float}  onBlur={unFloat} id={id}  placeholder=""/>
-        <Label  className={className}  htmlFor={id} >{label}</Label>
-        </Relative>
-    )
-}
-
-export default Input;
